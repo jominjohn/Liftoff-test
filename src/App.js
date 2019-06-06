@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import './Circle.css';
+import Plan from './Components/PlanComponent';
+import Report from './Components/ReportComponent';
 
 function App() {
+  const [tab, selectTab] = useState(0);
+  const [formValues, setFormValues] = useState({
+    name: '',
+    value: 0,
+    startDate: '',
+    endDate: ''
+  });
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="tab-flex">
+        <div className="tab" onClick={() => selectTab(0)}>Tab 1</div>
+        <div className="tab" onClick={() => selectTab(1)}>Tab 2</div>
+      </div>
+      <div>
+        {
+          !tab ?
+          <Plan formValues={formValues} setFormValues={setFormValues} selectTab={selectTab} />
+          :
+          <Report { ...formValues }/>
+        }
+      </div>
     </div>
   );
 }
