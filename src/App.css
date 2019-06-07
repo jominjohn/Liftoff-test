@@ -38,4 +38,42 @@
 }
 .tab {
   flex: 1;
+  border: #282c34;
+  border-width: 8px;
+  border-style: solid;
+  padding: 15px;
+  font-weight: bolder;
+  background-color: #61dafb
+}
+.form {
+  flex-direction: column;
+}
+.input-container {
+  flex: 1;
+  padding: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.form-input {
+  flex: 1;
+  width: 25%;
+  border: #282c34;
+  border-width: 2px;
+  border-style: solid;
+  padding: 15px;
+  font-weight: bolder;
+  background-color: #73a592
+}
+.form-submit {
+  background-color: #d8b5bb
+}
+.err {
+  color: #f1072f;
+}
+.cirlce-container {
+  margin: auto;
+  width: 1%;
+}
+.input-container {
+  font-weight: bolder;
 }
