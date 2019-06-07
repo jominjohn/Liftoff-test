@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import './Circle.css';
-import Plan from './Components/PlanComponent';
-import Report from './Components/ReportComponent';
+import Plan from './Components/Plan';
+import Report from './Components/Report';
 
 function App() {
   const [tab, selectTab] = useState(0);
